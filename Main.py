@@ -4,7 +4,7 @@ import os
 import shutil
 import subprocess
 import tkinter
-from winreg import *
+from _winreg  import *
 from tkinter import messagebox,filedialog
 import pickle
 
