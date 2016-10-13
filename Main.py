@@ -3,9 +3,9 @@ from win32com.client import Dispatch
 import os
 import shutil
 import subprocess
-import tkinter
+import Tkinter
 from _winreg  import *
-from tkinter import messagebox,filedialog
+from Tkinter import tkinter
 import pickle
 
 class MainWindow:
@@ -297,15 +297,16 @@ class MainWindow:
             ##print("Closed")
             self.quit()
         else:
+
             saveornot = messagebox.askyesno("AutoStartSoftware","Changes are not saved..do you want to quit?")
             if saveornot==False:
                 return
             self.quit()
 
 if __name__=="__main__":
-    window = tkinter.Tk()
+    window = Tkinter.Tk()
     window.state('normal')
-    m = MainWindow(window)
+    m = Tkinter.MainWindow(window)
     window.bind("<Escape>", lambda *ignore: m.quitConfirm())
     window.protocol("WM_DELETE_WINDOW",m.quitConfirm)
     window.resizable(False,False)
